@@ -6,6 +6,8 @@
 
 `trans-korean`은 Codex에서 사용하는 한글 문체 윤문 skill/plugin 프로젝트입니다. AI가 쓴 글처럼 보이는 번역투, 기계적인 병렬 구조, 상투적 결론 표현, 피동태 남용, 접속사 남발, 균일한 리듬을 줄이되 원문의 의미와 장르는 유지합니다.
 
+이 저장소는 Claude Code용으로 시작된 [`epoko77-ai/im-not-ai`](https://github.com/epoko77-ai/im-not-ai)를 fork한 뒤, Codex repo skill과 Codex plugin/marketplace 배포 흐름에 맞게 재구성한 버전입니다.
+
 핵심은 새 글을 쓰는 것이 아니라 **의미 보존형 국소 윤문**입니다. 사실, 주장, 수치, 고유명사, 직접 인용은 그대로 두고, 탐지된 AI 티 구간(span)에 근거한 수정만 수행합니다.
 
 ## 프로젝트 개요
