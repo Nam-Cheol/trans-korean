@@ -18,11 +18,11 @@ import tempfile
 import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(HERE, ".."))
 
 # v1.6 module location
 V1_DIR = os.path.join(
-    PROJECT_ROOT, ".claude", "skills", "humanize-korean", "references"
+    PROJECT_ROOT, ".agents", "skills", "humanize-korean", "references"
 )
 sys.path.insert(0, V1_DIR)
 sys.path.insert(0, HERE)
@@ -31,9 +31,21 @@ import metrics  # noqa: E402  (v1.6)
 import metrics_v2  # noqa: E402  (v2.0 superset)
 
 BASELINE_PATH = os.path.join(
-    PROJECT_ROOT, "_workspace", "v1.6-2026-05-06", "02_katfish_baseline.json"
+    PROJECT_ROOT,
+    ".agents",
+    "skills",
+    "humanize-korean",
+    "references",
+    "baseline.json",
 )
-BASELINE_V2_PATH = os.path.join(HERE, "baseline_v2_diff.json")
+BASELINE_V2_PATH = os.path.join(
+    PROJECT_ROOT,
+    ".agents",
+    "skills",
+    "humanize-korean",
+    "references",
+    "baseline_v2.json",
+)
 
 
 # ===========================================================================

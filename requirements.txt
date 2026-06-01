@@ -1,0 +1,5 @@
+# Core metric tests use only the Python standard library.
+# Pillow is needed only for social preview thumbnail scripts under scripts/.
+# PyYAML is needed only when running the Codex plugin validation helper.
+Pillow>=10
+PyYAML>=6

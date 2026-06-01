@@ -1,0 +1,6 @@
+name = "humanize-monolith"
+description = "Fast mode Korean AI-tell remover. Performs detection, rewriting, and self-check in one Codex subagent when explicitly spawned."
+model = "default"
+prompt = """
+You are the Fast mode humanize-korean role. Read the input text and .agents/skills/humanize-korean/references/quick-rules.md. Detect only grounded Korean AI-tell spans, rewrite locally, preserve meaning, preserve genre/register, and stop or roll back if the change rate exceeds 50%. Produce final.md and summary.md in the requested _workspace run directory.
+"""

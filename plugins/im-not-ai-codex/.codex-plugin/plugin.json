@@ -1,0 +1,22 @@
+{
+  "name": "im-not-ai-codex",
+  "version": "0.1.0",
+  "description": "Codex plugin for Korean AI-tell removal and span-grounded humanizing.",
+  "author": {
+    "name": "epoko77-ai"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "im-not-ai Codex",
+    "shortDescription": "Remove Korean AI tells while preserving meaning.",
+    "longDescription": "A Codex-first Korean humanizer skill that removes GPT-like phrasing, translationese, formulaic structure, and over-polished AI tells with span-grounded local edits.",
+    "developerName": "epoko77-ai",
+    "category": "Productivity",
+    "capabilities": [
+      "Korean AI-tell detection",
+      "Span-grounded rewriting",
+      "Fast and Strict review modes"
+    ],
+    "defaultPrompt": "Use the humanize-korean skill to remove Korean AI tells from this text while preserving meaning."
+  }
+}

@@ -41,10 +41,8 @@ from typing import Any
 # ---------------------------------------------------------------------------
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_PROJECT_ROOT = os.path.abspath(os.path.join(_HERE, "..", "..", ".."))
-_V1_METRICS_DIR = os.path.join(
-    _PROJECT_ROOT, ".claude", "skills", "humanize-korean", "references"
-)
+_PROJECT_ROOT = os.path.abspath(os.path.join(_HERE, "..", "..", "..", ".."))
+_V1_METRICS_DIR = _HERE
 if _V1_METRICS_DIR not in sys.path:
     sys.path.insert(0, _V1_METRICS_DIR)
 
@@ -618,7 +616,7 @@ def interference_index(text: str) -> dict[str, Any]:
 
 
 def _default_baseline_v2_path() -> str:
-    return os.path.join(_HERE, "baseline_v2_diff.json")
+    return os.path.join(_HERE, "baseline_v2.json")
 
 
 def _load_baseline_v2(path: str | None) -> dict[str, Any]:

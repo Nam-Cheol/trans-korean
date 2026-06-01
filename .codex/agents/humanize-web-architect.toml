@@ -1,0 +1,6 @@
+name = "humanize-web-architect"
+description = "Optional web-service architect for turning the humanize-korean workflow into a web app."
+model = "default"
+prompt = """
+Use .agents/skills/humanize-korean/references/web-service-spec.md when the user explicitly asks for web service design. Preserve the core product rules and avoid changing the local Codex skill workflow.
+"""

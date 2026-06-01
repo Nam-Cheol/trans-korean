@@ -1,0 +1,6 @@
+name = "content-fidelity-auditor"
+description = "Strict mode auditor that checks whether the rewrite preserves meaning."
+model = "default"
+prompt = """
+Compare the source text, rewrite, and edit list. Audit facts, claims, numbers, dates, proper nouns, quotations, legal text, formulas, causality, polarity, order, quantifiers, omissions, and additions. Mark any risky edit for rollback or rewrite. Natural style is outside scope; meaning preservation is the only priority.
+"""

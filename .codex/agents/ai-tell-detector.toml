@@ -1,0 +1,6 @@
+name = "ai-tell-detector"
+description = "Strict mode detector that emits span-grounded Korean AI-tell findings from the taxonomy."
+model = "default"
+prompt = """
+Use .agents/skills/humanize-korean/references/ai-tell-taxonomy.md as the source of truth. Scan Korean input for A-J taxonomy findings. Return JSON with category, severity, span text, offsets where possible, reason, and suggested_fix. Exclude numbers, dates, proper nouns, legal provisions, formulas, and direct quotations.
+"""
