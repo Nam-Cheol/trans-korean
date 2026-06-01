@@ -1,8 +1,12 @@
 # Contributors
 
-`im-not-ai`(humanize-korean) 개발에 기여해 주신 분들을 기록합니다. GitHub의 자동 Contributors 통계는 commit author 기준이라 외부 통찰·reference 작업이 잘 잡히지 않아, 별도 명단으로 정리합니다.
+`trans-korean`(humanize-korean) 개발에 기여해 주신 분들을 기록합니다. GitHub의 자동 Contributors 통계는 commit author 기준이라 외부 통찰·reference 작업이 잘 잡히지 않아, 별도 명단으로 정리합니다.
 
 ## Maintainer
+
+- **[@Nam-Cheol](https://github.com/Nam-Cheol)** — Codex 전용 `trans-korean` 배포명 정리와 plugin wrapper 유지보수.
+
+## 이전 이름 / fork provenance
 
 - **[@epoko77-ai](https://github.com/epoko77-ai)** (이승현, epoko@nate.com) — 프로젝트 창립 및 유지보수. 분류 체계(`.agents/skills/humanize-korean/references/ai-tell-taxonomy.md`) 설계, 다단계 윤문 파이프라인 구축, v1.x 릴리스 책임.
 

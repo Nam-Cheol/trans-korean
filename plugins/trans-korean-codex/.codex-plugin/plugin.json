@@ -1,0 +1,22 @@
+{
+  "name": "trans-korean-codex",
+  "version": "0.1.0",
+  "description": "Codex plugin for trans-korean, a Korean AI-tell reduction and meaning-preserving rewriting workflow.",
+  "author": {
+    "name": "Nam-Cheol"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "trans-korean Codex",
+    "shortDescription": "Reduce mechanical Korean AI tells while preserving meaning.",
+    "longDescription": "A Codex-first Korean writing skill that reduces GPT-like phrasing, translationese, formulaic structure, and over-polished AI tells with span-grounded local edits.",
+    "developerName": "Nam-Cheol",
+    "category": "Productivity",
+    "capabilities": [
+      "Korean AI-tell detection",
+      "Span-grounded rewriting",
+      "Fast and Strict review modes"
+    ],
+    "defaultPrompt": "Use the humanize-korean skill to reduce mechanical Korean AI tells from this text while preserving meaning."
+  }
+}

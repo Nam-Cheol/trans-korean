@@ -1,4 +1,4 @@
-"""Generate social preview thumbnail for im-not-ai.
+"""Generate social preview thumbnail for trans-korean.
 
 Size 1280x640 (GitHub social preview recommended).
 Warm cream background, typographic minimalism with before/after exemplar.
@@ -23,7 +23,19 @@ def F(weight, size):
         "reg": "Pretendard-Regular.otf",
         "light": "Pretendard-Light.otf",
     }
-    return ImageFont.truetype(str(FONT_DIR / names[weight]), size)
+    candidates = [
+        FONT_DIR / names[weight],
+        Path("/System/Library/Fonts/AppleSDGothicNeo.ttc"),
+        Path("/System/Library/Fonts/Supplemental/AppleGothic.ttf"),
+        Path("/System/Library/Fonts/Supplemental/NotoSansGothic-Regular.ttf"),
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            try:
+                return ImageFont.truetype(str(candidate), size)
+            except OSError:
+                continue
+    return ImageFont.load_default()
 
 
 W, H = 1280, 640
@@ -41,7 +53,7 @@ d = ImageDraw.Draw(img)
 PAD = 72
 
 # ---------- Header ----------
-d.text((PAD, 56), "im-not-ai", font=F("black", 82), fill=INK)
+d.text((PAD, 56), "trans-korean", font=F("black", 82), fill=INK)
 
 subtitle = "한글 AI 티 제거기"
 sub_f = F("med", 26)
@@ -148,7 +160,7 @@ d.text((badge_x + badge_w + 32, stat_y + 12), meta, font=meta_f, fill=MUTED)
 
 
 # ---------- Footer: URL ----------
-url = "github.com/epoko77-ai/im-not-ai"
+url = "github.com/Nam-Cheol/trans-korean"
 url_f = F("semi", 22)
 uw = d.textlength(url, font=url_f)
 d.text((W - PAD - uw, H - 50), url, font=url_f, fill=INK)

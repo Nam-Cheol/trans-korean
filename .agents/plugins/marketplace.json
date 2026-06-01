@@ -5,10 +5,13 @@
   },
   "plugins": [
     {
-      "name": "im-not-ai-codex",
+      "name": "trans-korean-codex",
+      "interface": {
+        "displayName": "trans-korean Codex"
+      },
       "source": {
         "source": "local",
-        "path": "./plugins/im-not-ai-codex"
+        "path": "./plugins/trans-korean-codex"
       },
       "policy": {
         "installation": "AVAILABLE",

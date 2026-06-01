@@ -46,8 +46,22 @@ W, H = 1280, 640
 # ---------------------------------------------------------------------------
 
 
+FALLBACK_FONTS = [
+    "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+    "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
+    "/System/Library/Fonts/Supplemental/NotoSansGothic-Regular.ttf",
+]
+
+
 def font(path: str, size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(path, size)
+    candidates = [path, *FALLBACK_FONTS]
+    for candidate in candidates:
+        if candidate and Path(candidate).exists():
+            try:
+                return ImageFont.truetype(candidate, size)
+            except OSError:
+                continue
+    return ImageFont.load_default()
 
 
 def draw_text(d: ImageDraw.ImageDraw, xy, text: str, f, fill, anchor="la"):
@@ -83,7 +97,7 @@ def build():
     f_sub = font(F_MED, 22)
     f_sub_em = font(F_SEMI, 22)
 
-    draw_text(d, (72, 70), "im-not-ai", f_title, TITLE)
+    draw_text(d, (72, 70), "trans-korean", f_title, TITLE)
     # 우상단 — 한글 AI 티 제거기
     sub_line1 = "한글 AI 티 제거기"
     sub_line2 = "v2.0 · 한국 번역학계 8유형 흡수"
@@ -168,7 +182,7 @@ def build():
     draw_text(d, (72, 590), "이근희 · 김정우 · 김도훈 · 김혜영 · Toral 2019", f_meta_sub, META)
 
     # 우측: github URL
-    draw_text(d, (W - 72, 590), "github.com/epoko77-ai/im-not-ai", f_link, LINK, anchor="ra")
+    draw_text(d, (W - 72, 590), "github.com/Nam-Cheol/trans-korean", f_link, LINK, anchor="ra")
 
     # Save
     OUT.parent.mkdir(parents=True, exist_ok=True)
